@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel= "shortcut icon" href="./images/title.png"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel = "stylesheet" type = "text/css" href = " navigation.css">
+    <title>FUWDA</title>
+</head>
+<body>
+<div class  = "head">
+<a>FUWDA</a>
+</div>
+<div class="navbar">
+  
+  <a href="logout.html"><span class = "glyphicon glyphicon-log-out"></span>Log Out</a>
+
+  <a href="settings.html"><span class = "glyphicon glyphicon-user"></span>Settings</a>
+  <a href="cart.html"><span class = "glyphicon glyphicon-shopping-cart"></span>Cart</a>
+
+</div>
+<P><P><P><P><P><P><P><P><P>
+<div class="forms">
+    <ul class="tab-group">
+        <li class="tab active"><a href="#food">Food</a></li>
+        <li class="tab"><a href="#snacks">Snacks</a></li>
+        <li class="tab"><a href="#beverages">Beverages</a></li>
+    </ul>
+    <div action="#" id="food">
+        <div class="input-field">
+           <table  style=width:"100%" cellpadding="15">
+            <tr>
+                <td>
+                        <img src = "./images/biryani1.jpg" alt="BIRYANI" width = "200px" height = "200px">
+                </td>
+                        <td>
+                        
+                            <h3 style="color: #FFFFFF">Chicken Biryani</h3><br>
+                            <p style="color: #FFFFFF">Price: Rs. 120.00 </p><br>
+                            <!--<input type="submit" value="ADD TO CART" onclick="biryanic()" class="button" />-->
+                            <button class="button" onclick="biryanic()">ADD TO CART</button>
+                        </td>
+            </tr>
+                    
+                <br>
+                <tr>
+                    <td>
+                        <a href="#"><img src = "./images/roti.jpg"  alt="ROTI" width = "200px" height = "200px"/></a></td>
+                        <td>
+                            <h3 style="color: #FFFFFF">Rumali Roti </h3><br>
+                            <p style="color: #FFFFFF">Price: Rs.60 </p><br>
+                            <button class="button" onclick="rotic()">ADD TO CART</button>
+                        </tr>
+                <br>
+                <tr>
+                    <td>
+                        <a href="#" ><img src = "./images/sajwan.jpeg" width = "200px" height = "200px"/></a>
+                        </td>
+                        <td>
+                            <h3 style="color: #FFFFFF">Sajwan Rice</h3><br>
+                            <p style="color: #FFFFFF">Price: Rs. 200</p><br>
+                            <button class="button" onclick="sajwanc()">ADD TO CART</button>
+                       </tr>
+                <br>
+                <tr>
+                    <td>
+                        <a href="#" ><img src = "./images/fullmeals.jpg" width = "200px" height = "200px"/></a>
+                        </td>
+                        <td>
+                            <h3 style="color: #FFFFFF">Full Meals</h3><br>
+                            <p style="color: #FFFFFF">Price: Rs. 100</p><br>
+                            <button class="button" onclick="fullmealsc()">ADD TO CART</button>
+                        </td>
+                    </tr>
+                <br>
+                <tr>
+                    <td >
+                        <a href="#" ><img src = "./images/fishbiryani.jpg" width = "200px" height = "200px"/></a></td>
+                        <td>
+                            <h3 style="color: #FFFFFF">Fish Biryani</h3><br>
+                            <p style="color: #FFFFFF">Price: Rs. 350</p><br>
+                            <button class="button" onclick="fishc()">ADD TO CART</button>
+                        </td>
+                    </tr>
+                </table>
+        
+        </div>
+    </div>
+    <div action="#" id="snacks">
+        <div class="input-field">
+            <table>
+                <tr>
+                    <td>
+                        <img src="./images/samosa.jpg" alt="" width = "200px" height = "200px"></td>
+                        <td>
+                        <div class="caption">
+                            <h3 style="color: #FFFFFF">Samosa </h3><br>
+                            <p style="color: #FFFFFF">Price: Rs. 50.00 </p><br>
+                            <button class="button" onclick="samosac()">ADD TO CART</button>
+                        </tr>
+                <br>
+
+               <tr>
+                <td>
+                        <img src="./images/manchuria.png" alt="" width = "200px" height = "200px"></td>
+                        <td>
+                        <div class="caption">
+                            <h3 style="color: #FFFFFF">Manchuria</h3><br>
+                            <p style="color: #FFFFFF">Price: Rs.140.00 </p><br>
+                            <button class="button" onclick="manchuriac()">ADD TO CART</button>
+                      </td>
+                  </tr>
+                <br>
+
+                <tr>
+                    <td>
+                        <img src="./images/pizza.jpg" alt="" width = "200px" height = "200px"></td>
+                        <td>
+                        <div class="caption">
+                            <h3 style="color: #FFFFFF">Cheese pizza</h3><br>
+                            <p style="color: #FFFFFF">Price: Rs.200.00 </p><br>
+                            <button class="button" onclick="pizzac()">ADD TO CART</button>
+                        
+<br>
+<tr>
+    <td>
+                
+                        <img src="./images/burger.jpg" alt="" width = "200px" height = "200px"></td>
+                        <td>
+                        <div class="caption">
+                            <h3 style="color: #FFFFFF">Burger</h3><br>
+                            <p style="color: #FFFFFF">Price: Rs.150.00 </p><br>
+                            <button class="button" onclick="burgerc()">ADD TO CART</button>
+                       
+                <br>
+                <tr>
+                    <td>
+                        <img src="./images/cookie.png" alt="" width = "200px" height = "200px"></td>
+                        <td>
+                        <div class="caption">
+                            <h3 style="color: #FFFFFF">Chocolate cookie</h3><br>
+                            <p style="color: #FFFFFF">Price: Rs. 100.00 </p><br>
+                            <button class="button" onclick="cookiec()">ADD TO CART</button>
+                        </td>
+                    </tr>
+                     </table> 
+        </div>
+    </div>
+           
+            
+    <div action="#" id="beverages">
+        <div class="input-field">
+          <table>
+            <tr>
+                <td>
+                        <img src="./images/coke.jpg" alt="" width = "200px" height = "200px"></td>
+                        <td>
+                        <div class="caption">
+                            <h3 style="color: #FFFFFF">Coke</h3><br>
+                            <p style="color: #FFFFFF">Price: Rs. 40.00 </p><br>
+                            <button class="button" onclick="cokec()">ADD TO CART</button>
+                        </div>
+                        </tr>
+                <br>
+
+              <tr>
+                <td>
+                        <img src="./images/pepsi.jpg" alt="" width = "200px" height = "200px"></td>
+                        <td>
+                        <div class="caption">
+                            <h3 style="color: #FFFFFF">Pepsi</h3><br>
+                            <p style="color: #FFFFFF">Price: Rs.40.00</p><br>
+                            <button class="button" onclick="pepsic()">ADD TO CART</button>
+                        </div>
+                    </tr>
+                       
+                <br>
+
+                <tr>
+                    <td>
+                        <img src="./images/sprite.jpg" alt="" width = "200px" height = "200px"></td>
+                        <td>
+                        <div class="caption">
+                            <h3 style="color: #FFFFFF">Sprite</h3><br>
+                            <p style="color: #FFFFFF">Price: Rs. 40.00</p><br>
+                            <button class="button" onclick="spritec()">ADD TO CART</button>
+                        </div>
+                    </tr>
+                      
+<br>
+               <tr>
+                <td>
+                        <img src="./images/lassi.jpg" alt="" width = "200px" height = "200px" margin="20px"></td>
+                        <td>
+                        <div class="caption">
+                            <h3 style="color: #FFFFFF">Lassi </h3><br>
+                            <p style="color: #FFFFFF">Price Rs.40.00</p><br>
+                            <button class="button" onclick="lassic()">ADD TO CART</button>
+                        </div>
+                    </tr>
+                   </table>
+
+        </div>
+    </div>
+            
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script type="text/javascript">
+$(document).ready(function(){
+      $('.tab a').on('click', function (e) {
+      e.preventDefault();
+      
+      $(this).parent().addClass('active');
+      $(this).parent().siblings().removeClass('active');
+      
+      var href = $(this).attr('href');
+      $('.forms > div').hide();
+      $(href).fadeIn(500);
+    });
+});
+</script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDvcZJMo4sqmBlINhGcnSgzjg7FgxcklzM",
+    authDomain: "fuwda-a931f.firebaseapp.com",
+    databaseURL: "https://fuwda-a931f.firebaseio.com",
+    projectId: "fuwda-a931f",
+    storageBucket: "fuwda-a931f.appspot.com",
+    messagingSenderId: "47222458785"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script type="text/javascript">
+    var Uid,users,useremail;
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        users = firebase.auth().currentUser;
+        Uid=users.uid; 
+      } else {
+        // No user is signed in.
+      }
+    });
+
+    function biryanic(){
+        useremail = users.email;
+        var ref = firebase.database().ref('users/');
+        ref.child('orders/'+Uid).push({
+            email:useremail,
+            item:"Chicken Biryani",
+            cost:"120"
+        });
+        window.alert("Added to your Cart");
+    }
+     function rotic(){
+        useremail = users.email;
+        var ref = firebase.database().ref('users/');
+        ref.child('orders/'+Uid).push({
+            email:useremail,
+            item:"Rumali Roti",
+            cost:"60"
+        });
+        window.alert("Added to your Cart");
+    }
+     function sajwanc(){
+        useremail = users.email;
+        var ref = firebase.database().ref('users/');
+        ref.child('orders/'+Uid).push({
+            email:useremail,
+            item:"Sajwan Rice",
+            cost:"200"
+        });
+        window.alert("Added to your Cart");
+    }
+     function fishc(){
+        useremail = users.email;
+        var ref = firebase.database().ref('users/');
+        ref.child('orders/'+Uid).push({
+            email:useremail,
+            item:"Fish Biryani",
+            cost:"350"
+        });
+        window.alert("Added to your Cart");
+    }
+    function fullmealsc(){
+        useremail = users.email;
+        var ref = firebase.database().ref('users/');
+        ref.child('orders/'+Uid).push({
+            email:useremail,
+            item:"Full Meals",
+            cost:"100"
+        });
+        window.alert("Added to your Cart");
+    }
+    function samosac(){
+        useremail = users.email;
+        var ref = firebase.database().ref('users/');
+        ref.child('orders/'+Uid).push({
+            email:useremail,
+            item:"Samosa",
+            cost:"50"
+        });
+        window.alert("Added to your Cart");
+    }
+    function manchuriac(){
+        useremail = users.email;
+        var ref = firebase.database().ref('users/');
+        ref.child('orders/'+Uid).push({
+            email:useremail,
+            item:"Manchuria",
+            cost:"140"
+        });
+        window.alert("Added to your Cart");
+    }
+    function pizzac(){
+        useremail = users.email;
+        var ref = firebase.database().ref('users/');
+        ref.child('orders/'+Uid).push({
+            email:useremail,
+            item:"Cheese Pizza",
+            cost:"200"
+        });
+        window.alert("Added to your Cart");
+    }
+    function burgerc(){
+        useremail = users.email;
+        var ref = firebase.database().ref('users/');
+        ref.child('orders/'+Uid).push({
+            email:useremail,
+            item:"Burger",
+            cost:"150"
+        });
+        window.alert("Added to your Cart");
+    }
+    function cookiec(){
+        useremail = users.email;
+        var ref = firebase.database().ref('users/');
+        ref.child('orders/'+Uid).push({
+            email:useremail,
+            item:"Chocolate Cookie",
+            cost:"100"
+        });
+        window.alert("Added to your Cart");
+    }
+    function cokec(){
+        useremail = users.email;
+        var ref = firebase.database().ref('users/');
+        ref.child('orders/'+Uid).push({
+            email:useremail,
+            item:"Coke",
+            cost:"40"
+        });
+        window.alert("Added to your Cart");
+    }
+    function pepsic(){
+        useremail = users.email;
+        var ref = firebase.database().ref('users/');
+        ref.child('orders/'+Uid).push({
+            email:useremail,
+            item:"Pepsi",
+            cost:"40"
+        });
+        window.alert("Added to your Cart");
+    }
+    function spritec(){
+        useremail = users.email;
+        var ref = firebase.database().ref('users/');
+        ref.child('orders/'+Uid).push({
+            email:useremail,
+            item:"Sprite",
+            cost:"40"
+        });
+        window.alert("Added to your Cart");
+    }
+    function lassic(){
+        useremail = users.email;
+        var ref = firebase.database().ref('users/');
+        ref.child('orders/'+Uid).push({
+            email:useremail,
+            item:"Lassi",
+            cost:"40"
+        });
+        window.alert("Added to your Cart");
+    }
+
+</script>
+
+ </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDvcZJMo4sqmBlINhGcnSgzjg7FgxcklzM",
+    authDomain: "fuwda-a931f.firebaseapp.com",
+    databaseURL: "https://fuwda-a931f.firebaseio.com",
+    projectId: "fuwda-a931f",
+    storageBucket: "fuwda-a931f.appspot.com",
+    messagingSenderId: "47222458785"
+  };
+  firebase.initializeApp(config);
+</script>
+<script>
+	firebase.auth().signOut().then(function() {
+  	window.location="./index.html"
+	}).catch(function(error) {
+ 	 window.alert("error in signing out");
+	});
+</script>
+</body>
+</html>

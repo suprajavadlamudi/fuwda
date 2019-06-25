@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel= "shortcut icon" href="./images/title.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FUWDA</title>
+        <link rel="stylesheet" type="text/css" href="./confirmorder.css">
+
+        <style type="text/css">
+            tr{
+                font-size: 20px;
+                font-family: sans-serif;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+                    <table id="table" border="1" style="border-collapse: collapse;" width="50%" align="center">
+                            <tr>
+                                <th>Name</th>
+                                <th>Cost</th>
+                            </tr>
+                    </table>
+                    <P><P><P><P>
+
+<p style="font-weight: bold;font-family: sans-serif;font-size: 18px;">Click on the Particular Item inorder to Delete that item from your cart and refresh the page</p><P><P><P>
+
+        <div class="navbar" align="center"><a href='confirmorder.html' class='btn_confirm'>Confirm Order</a></div>
+
+        <p>Or</p>
+        <div class="navbar" align="center"><a href='home.html' class='btn_confirm'>Go Back</a></div>
+
+        <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyDvcZJMo4sqmBlINhGcnSgzjg7FgxcklzM",
+            authDomain: "fuwda-a931f.firebaseapp.com",
+            databaseURL: "https://fuwda-a931f.firebaseio.com",
+            projectId: "fuwda-a931f",
+            storageBucket: "fuwda-a931f.appspot.com",
+            messagingSenderId: "47222458785"
+          };
+          firebase.initializeApp(config);
+        </script>
+
+        <script type="text/javascript">
+            var Uid,users,useremail;
+            firebase.auth().onAuthStateChanged(function(user) {
+              if (user) {
+                // User is signed in.
+                users = firebase.auth().currentUser;
+                Uid=users.uid; 
+                retrieve();
+              } else {
+                // No user is signed in.
+              }
+            });
+            var tcost=0,titems=0,flag=0;
+            function retrieve(){
+                var ref = firebase.database().ref('users/');
+                ref.child('orders/'+Uid).on("child_added", function(data, prevChildKey) {
+                            var val = data.val();
+                                var table = document.getElementById('table');
+                                newRow = table.insertRow(table.length);
+                                cell1 = newRow.insertCell(0);
+                                cell2 = newRow.insertCell(1);
+                                flag=1;
+                                titems=titems+1;
+                                tcost=tcost+Number(val.cost);
+                                cell1.innerHTML = val.item;
+                                cell2.innerHTML = val.cost;
+                                selectedrow();
+                }, function (error) {
+                   window.alert("Error: " + error.code);
+                });
+            }
+            function selectedrow(){
+                var rindex,flag=0;
+                var table = document.getElementById('table');
+
+                for(var i=1;i<table.rows.length;i++){
+                    table.rows[i].onclick = function(){
+                        rindex = this.rowIndex;
+                        var clickeditem = this.cells[0].innerHTML;
+                        var ref1 = firebase.database().ref('users/').child('orders/'+Uid);
+                        ref1.on("child_added",function(data,prevChildKey){
+                            var val = data.val();
+                            if(val.item === clickeditem && flag===0){
+                                flag=1;
+                               data.ref.remove();
+                           }
+                        });
+                       table.deleteRow(rindex);
+                    }
+                }
+            }
+
+        </script>
+    </body>
+</html>

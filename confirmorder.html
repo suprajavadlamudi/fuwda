@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel= "shortcut icon" href="./images/title.png"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="./confirmorder.css"><link rel= "shortcut icon" href="./images/title.png"/>
+    <title>FUWDA</title>
+</head>
+<body>
+	<center><img src="./images/deliveryboy.png" style="width:300px;height:300px;border-radius: 0px;margin-top: 20px;"/><br>
+	</center>
+	<h1> Your Food Order have been placed</h1>
+	<br>
+	<p>Sit. Back. Relax and wait for the food. Delivery boy will contact to your registered number to know the address.</p>
+	<hr>
+	<div class="button">
+		<input type="submit" value="Go Back" class="btn_status" onclick="goback();">
+		
+	</div>
+
+	<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyDvcZJMo4sqmBlINhGcnSgzjg7FgxcklzM",
+	    authDomain: "fuwda-a931f.firebaseapp.com",
+	    databaseURL: "https://fuwda-a931f.firebaseio.com",
+	    projectId: "fuwda-a931f",
+	    storageBucket: "fuwda-a931f.appspot.com",
+	    messagingSenderId: "47222458785"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+
+	</script>
+	<script type="text/javascript">
+		function goback() {
+			// body...
+			window.location = "./home.html";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel= "shortcut icon" href="./images/title.png"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel = "stylesheet" type = "text/css" href = "style2.css">
+    <title>SETTINGS</title>
+    </head>
+    <body>
+        
+        <div class="container-fluid" id="content" align="center">
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-4" id="settings-container">
+                    <h1>Change Password</h1>
+                       <label for="user">FULL NAME</label> 
+                        <input type="text" name="name" required="user" id="sname"/>
+                        <label for="email">EMAIL</label> 
+                        <input type="email" name="email" required="email" id="semail"/>
+                        <label for="phone">PHONE NUMBER</label> 
+                        <input type="number" name="number" required="number" id="sphn"/>
+                        <label for="dob">DATE OF BIRTH</label> 
+                        <input type="date" name="dob" required="dob" id="sdob"/>
+                        <label for="password">PASSWORD</label> 
+                        <input type="password" name="password" required="password" id="spassword"/><br><br>
+                        <input type="submit" value="Save Changes" onclick="change()" class="button" />
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <center>
+                    <p style="color: #ffffff">Copyright &copy; FUWDA. All Rights Reserved  |  Contact Us: +91 90000 00000</p>	
+                </center>
+            </div>
+        </footer>
+
+        <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDvcZJMo4sqmBlINhGcnSgzjg7FgxcklzM",
+    authDomain: "fuwda-a931f.firebaseapp.com",
+    databaseURL: "https://fuwda-a931f.firebaseio.com",
+    projectId: "fuwda-a931f",
+    storageBucket: "fuwda-a931f.appspot.com",
+    messagingSenderId: "47222458785"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script type="text/javascript">
+    var Uid,users,useremail;
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        users = firebase.auth().currentUser;
+        Uid=users.uid; 
+        useremail = users.email;
+        //change();
+      } else {
+        // No user is signed in.
+      }
+    });
+    function change(){
+        var semail,spassword,sphn,sdob,sname;   
+        semail = document.getElementById('semail').value;
+        spassword = document.getElementById('spassword').value;
+        sname = document.getElementById('sname').value;
+        sphn = String(document.getElementById('sphn').value);
+        sdob = String(document.getElementById('sdob').value);
+
+        var ref1 = firebase.database().ref('users/');
+        ref1.on("child_added",function(data,prevChildKey){
+            window.alert("okay");
+        });
+       /* window.alert(ref1);
+        ref1.on("child_added",function(data,prevChildKey){
+            var val = data.val();
+            if(val.email === useremail){
+             window.alert("okay"+useremail);
+                data.ref.remove();
+                ref1.push({
+                    username: sname,
+                    email: semail,
+                    phn: sphn,
+                    dob : sdob,
+                    sex : sgender
+                });
+            }
+
+        });*/
+    }
+</script>
+    </body>
+</html>
